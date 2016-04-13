@@ -27,6 +27,7 @@ var utils = (function () {
          *  jsonObj:[object] Conversion complete JSON format object
          * by team on 2016/03/31
          */
+        //把json转化为json对象
         formatJSON: function (jsonStr) {
             return "JSON" in window ? JSON.parse(jsonStr) : eval("(" + jsonStr + ")");
         },
@@ -39,6 +40,7 @@ var utils = (function () {
          *   Gets the value of the style attribute
          * by team on 2016/04/06
          */
+        //IE如果不兼容的情况下 获取元素的css属性值
         getCss: function (curEle, attr) {
             var val = null, reg = null;
             if (window.getComputedStyle) {
@@ -63,6 +65,7 @@ var utils = (function () {
          *   [object]{left:left offset,top:top offset}
          * by team on 2016/04/06
          */
+        //
         offset: function (curEle) {
             var disLeft = curEle.offsetLeft, disTop = curEle.offsetTop, par = curEle.offsetParent;
             while (par) {
