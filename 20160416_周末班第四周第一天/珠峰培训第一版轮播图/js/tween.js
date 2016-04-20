@@ -1,4 +1,4 @@
-~function () {
+ ~function () {
     //->linear:设定一个匀速运动的公式,获取当前元素的位置
     function linear(t, b, c, d) {
         return c * t / d + b;
